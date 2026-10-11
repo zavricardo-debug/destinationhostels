@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stay somewhere with a story. Social hostels and apartments across Portugal." />
+  <title>Destination Hostels — Portugal, your way</title>
+  <link rel="preload" as="image" href="https://www.destinationhostels.com/wp-content/uploads/2021/07/Arrifana-nature-scaled.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement-bar">
+    <span class="spark">✦</span> Stay longer, live better — save 15% on 7+ night stays <a href="offers.html">See the good stuff <span aria-hidden="true">→</span></a>
+    <button class="announcement-close" aria-label="Close announcement">×</button>
+  </div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Destination Hostels home">
+      <svg class="brand-mark" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 3c6.5 0 12 3.2 15.4 8.2L25.6 17 39 22.8C38.1 32 30.4 39 21 39 11.1 39 3 30.9 3 21S11.1 3 21 3Z" fill="currentColor"/><path d="m14 25.8 14-8.2-7 13.5-2.1-6.3-4.9 1.1Z" fill="#fdfbf7"/></svg>
+      <span><b>destination</b><small>HOSTELS</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="stays.html">Stays</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="offers.html">Offers</a>
+      <a href="about.html">Our story</a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-button" aria-label="Choose language">EN <span>⌄</span></button>
+      <button class="header-book-button" data-open-booking>Book a stay <span aria-hidden="true">↗</span></button>
+      <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="stays.html">Stays</a><a href="experiences.html">Experiences</a><a href="offers.html">Offers</a><a href="about.html">Our story</a>
+      <button data-open-booking>Book a stay <span>↗</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-image" role="img" aria-label="Friends overlooking the Portuguese Atlantic coast at golden hour"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content section-shell">
+        <p class="eyebrow eyebrow-light"><span></span> Portugal, your way</p>
+        <h1 id="hero-title">The best stories<br>start <em>somewhere.</em></h1>
+        <p class="hero-copy">A room is just the beginning. Find your people, chase your coast, and make Portugal feel like your own.</p>
+        <a class="text-link text-link-light" href="stays.html">Explore our stays <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-bottom section-shell"><p>Scroll to find your place</p><span class="hero-scroll-line"></span><p>37.1037° N, 8.6729° W</p></div>
+    </section>
+
+    <section class="booking-wrap section-shell" aria-label="Start your booking">
+      <form class="booking-bar" id="booking-form">
+        <div class="booking-intro"><span class="live-dot"></span><strong>Find your next stay</strong><small>Best price, always</small></div>
+        <label class="field field-destination"><span>Destination</span><select id="destination" aria-label="Destination"><option>Anywhere in Portugal</option><option>Lisbon</option><option>Arrifana</option><option>Porto Santo</option></select></label>
+        <label class="field"><span>Check in</span><input id="checkin" type="date" aria-label="Check in date" /></label>
+        <label class="field"><span>Check out</span><input id="checkout" type="date" aria-label="Check out date" /></label>
+        <label class="field field-guests"><span>Guests</span><select id="guests" aria-label="Number of guests"><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option><option>5+ guests</option></select></label>
+        <button class="booking-submit" type="submit">Search <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <section class="intro section-shell">
+      <div class="intro-label"><span class="scribble">●</span> Since 2007</div>
+      <div class="intro-copy">
+        <p class="eyebrow">This is your sign</p>
+        <h2>Come for the bed.<br><em>Stay for everything else.</em></h2>
+        <p>We make room for the kind of travel that stays with you — shared breakfasts, salty hair, local secrets and friendships that make the flight home feel too soon.</p>
+        <a class="text-link" href="about.html">Meet Destination <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="intro-stats" aria-label="Destination Hostels by the numbers">
+        <div><strong>16</strong><span>years of good<br>stories</span></div>
+        <div><strong>8</strong><span>unique places<br>to land</span></div>
+        <div><strong>∞</strong><span>reasons to come<br>back</span></div>
+      </div>
+    </section>
+
+    <section class="stays-section" id="stays">
+      <div class="section-shell section-heading">
+        <div><p class="eyebrow">Choose your own adventure</p><h2>Sleep where the<br><em>good stuff happens.</em></h2></div>
+        <a class="round-link" href="stays.html" aria-label="View all stays"><span>All stays</span><i aria-hidden="true">↗</i></a>
+      </div>
+      <div class="stay-grid section-shell" id="all-stays">
+        <article class="stay-card stay-card-main">
+          <a href="property.html?property=sunset" class="stay-card-image"><img src="https://www.destinationhostels.com/wp-content/uploads/2021/07/sunset-destination-hostel-011.jpg" alt="Rooftop pool and Lisbon city view" /><span class="card-flag">City pulse</span></a>
+          <div class="stay-card-body"><div><p class="stay-place">Lisbon</p><h3>Sunset Destination<br>Hostel</h3></div><a class="circle-arrow" href="property.html?property=sunset" aria-label="View Sunset Destination Hostel">↗</a></div>
+          <p class="stay-description">Rooftop swims, Rossio on your doorstep, and a sunset worth staying up for.</p>
+          <div class="stay-meta"><span>✦ Rooftop pool</span><span>2 min to Rossio</span><b>From €24</b></div>
+        </article>
+        <article class="stay-card">
+          <a href="property.html?property=arrifana-hostel" class="stay-card-image"><img src="https://www.destinationhostels.com/wp-content/uploads/2021/07/IMG_4681-min-scaled-2.jpg" alt="Surf hostel terrace overlooking Arrifana's cliffs" /><span class="card-flag">Wild coast</span></a>
+          <div class="stay-card-body"><div><p class="stay-place">Arrifana</p><h3>Arrifana<br>Destination</h3></div><a class="circle-arrow" href="property.html?property=arrifana-hostel" aria-label="View Arrifana Destination">↗</a></div>
+          <p class="stay-description">Cliffside mornings and a wave for every level. Surf's up, always.</p>
+          <div class="stay-meta"><span>✦ Surf &amp; yoga</span><span>Ocean view</span><b>From €21</b></div>
+        </article>
+        <article class="stay-card">
+          <a href="property.html?property=porto-santo" class="stay-card-image"><img src="https://www.destinationhostels.com/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-22-at-11.25.21.jpeg" alt="Golden Porto Santo beach beside a bright apartment" /><span class="card-flag">Slow island</span></a>
+          <div class="stay-card-body"><div><p class="stay-place">Porto Santo</p><h3>Porto Santo<br>Apartment</h3></div><a class="circle-arrow" href="property.html?property=porto-santo" aria-label="View Porto Santo Apartment">↗</a></div>
+          <p class="stay-description">Golden sand, island time and space to make the ordinary feel far away.</p>
+          <div class="stay-meta"><span>✦ Beach front</span><span>Island escape</span><b>From €33</b></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Destination values">
+      <div class="marquee-track"><span>GOOD PEOPLE</span><i>✦</i><span>GOOD PLACES</span><i>✦</i><span>GOOD STORIES</span><i>✦</i><span>GOOD PEOPLE</span><i>✦</i><span>GOOD PLACES</span><i>✦</i><span>GOOD STORIES</span><i>✦</i></div>
+    </section>
+
+    <section class="experience-section section-shell" id="experiences">
+      <div class="experience-image"><img src="https://www.destinationhostels.com/wp-content/uploads/2021/07/Arrifana-nature-scaled.jpg" alt="Friends sharing a coastal view in Portugal" /><div class="image-stamp">since<br><b>2007</b></div></div>
+      <div class="experience-copy"><p class="eyebrow">More than a key card</p><h2>Make it a trip<br>to <em>remember.</em></h2><p>Every Destination is made for connection. Jump in on a family dinner, paddle out at first light, find a new favorite street, or do absolutely nothing at all.</p>
+        <ul class="experience-list"><li><span>01</span><b>Eat together</b><small>Family dinners, local flavors, long tables</small></li><li><span>02</span><b>Go further</b><small>Surf, tours and places only locals know</small></li><li><span>03</span><b>Feel at home</b><small>Warm welcomes, zero pressure, good energy</small></li></ul>
+        <a class="button button-ink" href="offers.html">Find your experience <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="offers-section" id="offers">
+      <div class="section-shell offer-layout">
+        <div class="offer-copy"><p class="eyebrow eyebrow-light">A little extra sunshine</p><h2>Stay a while.<br><em>Save a little.</em></h2><p>There is no right way to do Portugal. But these flexible offers might make your next move an easy one.</p><a class="button button-coral" href="book.html">See all offers <span>↗</span></a></div>
+        <div class="offer-cards">
+          <article class="offer-card"><p>FOR THE<br>UNRUSHED</p><h3>15% off<br>7+ nights</h3><span>Long stay, more play <b>→</b></span></article>
+          <article class="offer-card offer-card-yellow"><p>FOR THE<br>EARLY BIRDS</p><h3>Book ahead,<br>get 10% off</h3><span>Plan now, roam later <b>→</b></span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials section-shell">
+      <p class="eyebrow">Postcards from our people</p>
+      <div class="quote-wrap"><button class="quote-control prev" aria-label="Previous review">←</button><blockquote id="quote-text">“One of those rare places where it takes about five minutes to feel like you already belong.”</blockquote><button class="quote-control next" aria-label="Next review">→</button></div>
+      <div class="quote-footer"><span id="quote-author">Maya R. <i>— London</i></span><div class="quote-dots" aria-label="Review navigation"><button class="active" aria-label="Review 1"></button><button aria-label="Review 2"></button><button aria-label="Review 3"></button></div><span>★★★★★ <i>2,000+ happy stays</i></span></div>
+    </section>
+
+    <section class="story-section" id="our-story">
+      <div class="section-shell story-inner"><p class="eyebrow">The destination is the feeling</p><h2>We’re here for your<br><em>best detours.</em></h2><a href="book.html" class="story-circle-link"><span>Start<br>your<br>story</span><b>↗</b></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="section-shell footer-top"><a class="brand brand-footer" href="#top" aria-label="Destination Hostels home"><svg class="brand-mark" viewBox="0 0 42 42" aria-hidden="true"><path d="M21 3c6.5 0 12 3.2 15.4 8.2L25.6 17 39 22.8C38.1 32 30.4 39 21 39 11.1 39 3 30.9 3 21S11.1 3 21 3Z" fill="currentColor"/><path d="m14 25.8 14-8.2-7 13.5-2.1-6.3-4.9 1.1Z" fill="#fdfbf7"/></svg><span><b>destination</b><small>HOSTELS</small></span></a>
+      <div class="footer-links"><div><b>Explore</b><a href="stays.html">Our stays</a><a href="experiences.html">Experiences</a><a href="offers.html">Offers</a></div><div><b>About us</b><a href="about.html">Our story</a><a href="journal.html">Journal</a><a href="contact.html">Contact</a></div></div>
+      <form class="newsletter" id="newsletter-form"><p><b>Keep the good energy coming.</b><span>Stories, offers and a little sunshine in your inbox.</span></p><label><input type="email" placeholder="Your email address" aria-label="Your email address" required /><button aria-label="Sign up for newsletter">→</button></label><small id="newsletter-message" aria-live="polite"></small></form>
+    </div>
+    <div class="section-shell footer-bottom"><span>© 2026 Destination Hostels</span><span>Made for meaningful detours</span><div><a href="#top">Instagram</a><a href="#top">Facebook</a><a href="#top">TikTok</a></div></div>
+  </footer>
+
+  <dialog class="booking-dialog" id="booking-dialog" aria-labelledby="booking-title">
+    <button class="dialog-close" aria-label="Close booking dialog">×</button>
+    <p class="eyebrow">Your Portugal chapter</p><h2 id="booking-title">Let’s find your<br><em>right place.</em></h2>
+    <form class="dialog-form" id="dialog-form"><label>Where do you want to go?<select id="dialog-destination"><option>Anywhere in Portugal</option><option>Lisbon</option><option>Arrifana</option><option>Porto Santo</option></select></label><div class="dialog-date-row"><label>Check in<input id="dialog-checkin" type="date" required></label><label>Check out<input id="dialog-checkout" type="date" required></label></div><label>Who’s coming?<select><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option></select></label><button class="button button-coral" type="submit">Show available stays <span>→</span></button></form>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
