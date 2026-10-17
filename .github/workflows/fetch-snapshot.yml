@@ -1,0 +1,52 @@
+name: Fetch page snapshot
+
+# Temporary helper: fetches one or more public URLs on a runner and stores the
+# bundle as an unreferenced git blob so it can be pulled through the GitHub API.
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: Space-separated list of URLs to fetch
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch URLs
+        env:
+          URLS: ${{ inputs.urls }}
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          i=0
+          : > out/manifest.txt
+          for u in $URLS; do
+            i=$((i+1))
+            name=$(printf '%03d_%s' "$i" "$(basename "${u%%\?*}" | tr -c 'A-Za-z0-9._-' '_')")
+            [ -n "$name" ] || name="$i.bin"
+            code=$(curl -sSL --compressed -o "out/$name" -w '%{http_code}' -A 'Mozilla/5.0' "$u" || echo "ERR")
+            echo "$code	$u	$name	$(wc -c < "out/$name" 2>/dev/null || echo 0)" | tee -a out/manifest.txt
+          done
+          tar czf snapshot.tgz out
+          ls -la snapshot.tgz
+
+      - name: Store bundle as git blob
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          python3 - <<'EOF'
+          import base64, json
+          data = open('snapshot.tgz', 'rb').read()
+          json.dump({'content': base64.b64encode(data).decode(), 'encoding': 'base64'}, open('blob.json', 'w'))
+          EOF
+          SHA=$(gh api -X POST "repos/$REPO/git/blobs" --input blob.json --jq .sha)
+          SIZE=$(wc -c < snapshot.tgz)
+          echo "::notice title=snapshot-blob::$SHA $SIZE"
+          echo "snapshot blob: $SHA ($SIZE bytes)" >> "$GITHUB_STEP_SUMMARY"
